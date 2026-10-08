@@ -1,0 +1,13 @@
+
+#btnThisDocument {
+    -fx-background-color: #039ed3ff; /* Цвет по умолчанию */
+}
+
+#btnThisDocument:focused {
+    -fx-background-color: #e0f7fa; /* Цвет при получении фокуса */
+}
+
+#btnThisDocument:not(:focused) {
+    -fx-background-color: #039fd3ff; /* Восстановление цвета по умолчанию при потере фокуса */
+    -fx-text-fill: 'This document';
+}

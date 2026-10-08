@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="gridPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sml.worker.documents.ControllerPDFWindow">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="60.0" prefWidth="60.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="60.0" prefWidth="60.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="50.0" prefWidth="50.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="60.0" prefWidth="60.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="-Infinity" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <ProgressBar fx:id="progressbar" maxHeight="100.0" maxWidth="3000.0" progress="0.0" GridPane.columnSpan="9" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </ProgressBar>
+      <Label fx:id="labelCurrentPage" text="current Page" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="labelPages" text="Pages" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="5.0" />
+         </GridPane.margin></Label>
+      <Button fx:id="btnPreviewPage" mnemonicParsing="false" onMouseClicked="#previewPage" text="Preview page" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin></Button>
+      <Button fx:id="btnNextPage" mnemonicParsing="false" onMouseClicked="#nextPage" text="Next page" GridPane.columnIndex="6" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="5.0" />
+         </GridPane.margin></Button>
+      <Button fx:id="btnGoToPage" mnemonicParsing="false" onMouseClicked="#goToPage" text="Go to page" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin>
+      </Button>
+      <TextField fx:id="textFieldPage" onKeyReleased="#keyReleased" GridPane.columnIndex="8" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin>
+      </TextField>
+      <ScrollPane fx:id="scrollPane" onScroll="#scroll" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="9">
+         <content>
+            <ImageView fx:id="imageView" preserveRatio="true" />
+         </content>
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </ScrollPane>
+      <Label fx:id="labelBookMark" alignment="CENTER" contentDisplay="CENTER" text="bookmark" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+      <Button fx:id="btnGoToBookmark" mnemonicParsing="false" onMouseClicked="#goToBookmark" text="Go to bookmark" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+      <Button fx:id="btnSetBookmark" mnemonicParsing="false" onMouseClicked="#setBookmark" text="Set bookmark" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+   </children>
+</GridPane>

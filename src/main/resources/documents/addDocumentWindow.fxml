@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sml.worker.documents.ControllerAddDocumentWindow">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" percentHeight="7.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="7.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="7.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label alignment="CENTER" prefWidth="1000.0" text="Type of document" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets bottom="5.0" />
+         </GridPane.margin>
+      </Label>
+      <ChoiceBox fx:id="choiceBox" prefWidth="1000.0" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </ChoiceBox>
+      <Button mnemonicParsing="false" onMouseClicked="#addNewTypeOfDocument" prefWidth="1000.0" text="Add" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets left="10.0" right="5.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" onMouseClicked="#choiceFile" prefWidth="1000.0" text="Choice a file (PDF)" textAlignment="CENTER" GridPane.columnSpan="3" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets left="5.0" right="20.0" />
+         </GridPane.margin>
+      </Button>
+      <Label fx:id="labelChosenFile" prefWidth="2000.0" GridPane.columnSpan="6" GridPane.rowIndex="3" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </Label>
+      <TextArea fx:id="descriptionArea" prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnSpan="6" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin>
+      </TextArea>
+      <Label alignment="CENTER" prefWidth="1000.0" text="Description" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets bottom="5.0" />
+         </GridPane.margin>
+      </Label>
+      <Button mnemonicParsing="false" onMouseClicked="#addFile" prefWidth="1000.0" text="Add file" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+      <Label fx:id="labelAddFileInformation" alignment="CENTER" prefWidth="2000.0" textAlignment="CENTER" GridPane.columnSpan="6" GridPane.rowIndex="7">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" />
+         </GridPane.margin>
+      </Label>
+      <Label alignment="CENTER" prefWidth="2000.0" text="Chosen file" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets bottom="5.0" />
+         </GridPane.margin>
+      </Label>
+   </children>
+</GridPane>
